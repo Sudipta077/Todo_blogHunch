@@ -1,12 +1,20 @@
 
 import './App.css';
+import Login from './components/Login';
+import Register from './components/Register';
 import Todo from './components/Todo';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <Todo/>
-    </div>
+    <BrowserRouter>
+      <Routes>
+
+          <Route path="/" element={<Todo />} />
+          <Route path="/login" element={<Login/>} />
+          <Route path="/register" element={<Register/>} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

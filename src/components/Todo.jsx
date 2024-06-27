@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Todo=()=> {
   const getItems = () => {
@@ -82,6 +83,11 @@ useEffect(()=>{
 
   return(
     <>
+        <div className="button w-fit p-2 bg-sky-300 hover:cursor-pointer m-5 rounded-full">
+            <NavLink to='/login'>
+                    Login
+            </NavLink>
+        </div>
         <div className="box w-80  mx-auto translate-y-10 p-3 relative">
           <div className=" input flex justify-center gap-2">
           <input className='bg-slate-100 font-serif p-2 pl-2 rounded-full mt-1' type="text" placeholder='Add your task...' value={name} onChange={(e)=>handleChange(e)}/>
